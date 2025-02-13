@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://ee.digital.twin/base"
+            class="base.Base_Package"
+            genModel="model/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated artifact -->
+      <package
+            uri="http://ee.digital.twin/artifact"
+            class="artifact.Artifact_Package"
+            genModel="model/artifact.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated component -->
+      <package
+            uri="http://ee.digital.twin/component"
+            class="component.Component_Package"
+            genModel="model/component.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated terminology -->
+      <package
+            uri="http://ee.digital.twin/terminology"
+            class="terminology.Terminology_Package"
+            genModel="model/terminology.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated digital_twin -->
+      <package
+            uri="http://ee.digital.twin/digital_twin"
+            class="digital_twin.Digital_twin_Package"
+            genModel="model/digital_twin.genmodel"/>
+   </extension>
+
+</plugin>
