@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="ee.digital.twin.design.Activator"
+               id="ee.digital.twin.design"
+	       name="twin">
+    </component>
+  </extension>
+</plugin>
