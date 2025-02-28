@@ -1,0 +1,89 @@
+"Generate Start.".println();
+//mainGenerateExcel();
+//mainimportRegulationValues();
+//mainimportRealValues();
+//mainImportExcelObjects();
+//var m : new Excel!Sheet;
+//m.name = "Model!";
+"Generate Over.".println();
+
+operation mainimportRegulationValues(){
+	Model!Component.all.importRegulationValues();
+	Model!Input.all.importRegulationValues();
+	Model!Output.all.importRegulationValues();
+}
+
+operation mainimportRealValues(){
+	Model!Component.all.importRealValues();
+	Model!Input.all.importRealValues();
+	Model!Output.all.importRealValues();
+}
+
+operation mainGenerateExcel(){
+	Model!Component.all.generate();
+	Model!Input.all.generate();
+	Model!Output.all.generate();
+}
+
+operation Any generate(){
+	for (e in self){
+		if (e.isDefined() and e.reading.isDefined()){
+			var m : new Excel!Sheet;
+			m.name = e.name.content;
+			m.type = e.type.name;
+			m.gid = e.gid;
+			m.upper_value = e.reading.upper_value.asReal();
+			m.lower_value = e.reading.lower_value.asReal();
+			m.value = e.reading.value.asReal();
+			if (not e.isDefined()){
+			}
+			else if (e.type.name == "Fork"){
+				"p is Fork.".println();
+			}
+			else if (e.faulty == true){
+				m.state = "故障状态";
+			}
+			else if (e.RunningNormally == true){
+				m.state = "正常状态";
+			}
+			else if (e.RunningAbnormally == true){
+				m.state = "异常状态";
+			}
+			else if (e.ToBePredicted == true){
+				m.state = "待检测";
+			}
+		}
+	}
+}
+
+operation Any importRealValues(){
+	for (c in self){
+		for (e in Excel!Sheet){
+			if (e.gid.asReal() == c.gid.asReal()){
+				c.gid.println("更新真实数据 gid:");
+				c.reading.value = e.value.asReal().asDouble();
+			}
+		}
+	}
+}
+
+operation Any importRegulationValues(){
+	for (c in self){
+		for (e in Excel!Sheet){
+			if (e.gid.asReal() == c.gid.asReal()){
+				c.gid.println("更新规则数据 gid:");
+				c.reading.upper_value = e.upper_value.asReal().asDouble();
+				c.reading.lower_value = e.lower_value.asReal().asDouble();
+			}
+		}
+	}
+}
+
+operation mainImportExcelObjects(){
+	var excel = ExcelImport!Sheet;
+	for (e in excel){
+		if (e.type == "Component"){
+			
+		}
+	}
+}

@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digital_twin_:DigitalTwinPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component_="http://cnsa.ee.digital.twin/component" xmlns:digital_twin_="http://cnsa.ee.digital.twin/digital_twin">
+  <componentPackages>
+    <name content="New Component Package"/>
+    <description>
+      <content>
+        <value content="Component Description"/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <components xsi:type="component_:Component" gid="14901" RunningNormally="true" ToBePredicted="false">
+      <name content="Example EE System"/>
+      <description>
+        <content>
+          <value content=""/>
+        </content>
+      </description>
+      <externalReference>
+        <location content="location"/>
+        <type content="type"/>
+        <metadata content="metadata"/>
+        <implementationConstraint>
+          <content>
+            <value content="Query"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Query Result"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Simulation Variable"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Simulation Result"/>
+          </content>
+        </implementationConstraint>
+      </externalReference>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.3/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14902" RunningAbnormally="true" ToBePredicted="false">
+        <name content="EE_Unit2"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14915" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="10.300000190734863" upper_value="16.5" lower_value="7.0"/>
+        </inputs>
+        <inputs gid="14916" RunningAbnormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="11.0" upper_value="17.600000381469727" lower_value="7.5"/>
+        </inputs>
+        <inputs gid="14917" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="11.699999809265137" upper_value="18.700000762939453" lower_value="8.0"/>
+        </inputs>
+        <outputs gid="14939" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="27.100000381469727" upper_value="42.900001525878906" lower_value="19.0"/>
+        </outputs>
+        <outputs gid="14940" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="27.799999237060547" upper_value="44.0" lower_value="19.5"/>
+        </outputs>
+        <outputs gid="14941" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="28.5" upper_value="45.099998474121094" lower_value="20.0"/>
+        </outputs>
+        <reading value="1.2000000476837158" upper_value="2.200000047683716" lower_value="0.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.8/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14903" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit5"/>
+        <description gid="">
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14918" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="12.399999618530273" upper_value="19.799999237060547" lower_value="8.5"/>
+        </inputs>
+        <outputs gid="14942" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="29.200000762939453" upper_value="46.20000076293945" lower_value="20.5"/>
+        </outputs>
+        <reading value="1.899999976158142" upper_value="3.299999952316284" lower_value="1.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="14904" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit3"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14919" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="13.100000381469727" upper_value="20.899999618530273" lower_value="9.0"/>
+        </inputs>
+        <inputs gid="14920" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="13.800000190734863" upper_value="22.0" lower_value="9.5"/>
+        </inputs>
+        <outputs gid="14943" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="29.899999618530273" upper_value="47.29999923706055" lower_value="21.0"/>
+        </outputs>
+        <outputs gid="14944" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="30.600000381469727" upper_value="48.400001525878906" lower_value="21.5"/>
+        </outputs>
+        <outputs gid="14945" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="31.299999237060547" upper_value="49.5" lower_value="22.0"/>
+        </outputs>
+        <outputs gid="14946" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="32.0" upper_value="50.599998474121094" lower_value="22.5"/>
+        </outputs>
+        <outputs gid="14947" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="32.70000076293945" upper_value="51.70000076293945" lower_value="23.0"/>
+        </outputs>
+        <reading value="2.5999999046325684" upper_value="4.400000095367432" lower_value="1.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="14905" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit7"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <outputs gid="14948" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="33.400001525878906" upper_value="52.79999923706055" lower_value="23.5"/>
+        </outputs>
+        <outputs gid="14949" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="34.099998474121094" upper_value="53.900001525878906" lower_value="24.0"/>
+        </outputs>
+        <outputs gid="14950" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="34.79999923706055" upper_value="55.0" lower_value="24.5"/>
+        </outputs>
+        <reading value="3.299999952316284" upper_value="5.5" lower_value="2.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.2" target="//@componentPackages.0/@components.0/@sub_components.1/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.5/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.4/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14906" dynamic="true" faulty="true" ToBePredicted="false">
+        <name content="EE_Unit4"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14921" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="14.5" upper_value="23.100000381469727" lower_value="10.0"/>
+        </inputs>
+        <inputs gid="14922" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="15.199999809265137" upper_value="24.200000762939453" lower_value="10.5"/>
+        </inputs>
+        <inputs gid="14923" RunningAbnormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="15.899999618530273" upper_value="25.299999237060547" lower_value="11.0"/>
+        </inputs>
+        <outputs gid="14951" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="35.5" upper_value="56.099998474121094" lower_value="25.0"/>
+        </outputs>
+        <reading value="88.0" upper_value="6.599999904632568" lower_value="2.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="14907" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit1"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14924" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="16.600000381469727" upper_value="26.399999618530273" lower_value="11.5"/>
+        </inputs>
+        <inputs gid="14925" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="17.299999237060547" upper_value="27.5" lower_value="12.0"/>
+        </inputs>
+        <outputs gid="14952" faulty="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="10.0" upper_value="57.20000076293945" lower_value="25.5"/>
+        </outputs>
+        <reading value="4.699999809265137" upper_value="7.699999809265137" lower_value="3.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.9/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.1/@inputs.1" RunningAbnormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.5/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.8/@inputs.1" faulty="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.5/@outputs.2" target="//@componentPackages.0/@components.0/@sub_components.9/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.1/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.8/@inputs.2" RunningAbnormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14908" RunningAbnormally="true" ToBePredicted="false">
+        <name content="EE_Unit6"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14926" RunningAbnormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="18.0" upper_value="28.600000381469727" lower_value="12.5"/>
+        </inputs>
+        <inputs gid="14927" RunningAbnormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="18.700000762939453" upper_value="29.700000762939453" lower_value="13.0"/>
+        </inputs>
+        <outputs gid="14953" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="36.900001525878906" upper_value="58.29999923706055" lower_value="26.0"/>
+        </outputs>
+        <outputs gid="14954" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="37.599998474121094" upper_value="59.400001525878906" lower_value="26.5"/>
+        </outputs>
+        <outputs gid="14955" RunningAbnormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="38.29999923706055" upper_value="60.5" lower_value="27.0"/>
+        </outputs>
+        <reading value="5.400000095367432" upper_value="8.800000190734863" lower_value="3.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.1/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.14/@inputs.0" RunningAbnormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.8/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.14/@inputs.1" RunningAbnormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14909" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit8"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <outputs gid="14956" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="39.0" upper_value="61.599998474121094" lower_value="27.5"/>
+        </outputs>
+        <outputs gid="14957" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="39.70000076293945" upper_value="62.70000076293945" lower_value="28.0"/>
+        </outputs>
+        <outputs gid="14958" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="40.400001525878906" upper_value="63.79999923706055" lower_value="28.5"/>
+        </outputs>
+        <reading value="6.099999904632568" upper_value="9.899999618530273" lower_value="4.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="14910" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit9"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14928" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="19.399999618530273" upper_value="30.799999237060547" lower_value="13.5"/>
+        </inputs>
+        <outputs gid="14959" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="41.099998474121094" upper_value="64.9000015258789" lower_value="29.0"/>
+        </outputs>
+        <outputs gid="14960" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="41.79999923706055" upper_value="66.0" lower_value="29.5"/>
+        </outputs>
+        <reading value="6.800000190734863" upper_value="11.0" lower_value="4.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.17/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.4/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.17/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.18/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.18/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.9/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14911" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit10"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14929" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="20.100000381469727" upper_value="31.899999618530273" lower_value="14.0"/>
+        </inputs>
+        <inputs gid="14930" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="20.799999237060547" upper_value="33.0" lower_value="14.5"/>
+        </inputs>
+        <outputs gid="14961" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="42.5" upper_value="67.0999984741211" lower_value="30.0"/>
+        </outputs>
+        <outputs gid="14962" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="43.20000076293945" upper_value="68.19999694824219" lower_value="30.5"/>
+        </outputs>
+        <outputs gid="14963" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="43.900001525878906" upper_value="69.30000305175781" lower_value="31.0"/>
+        </outputs>
+        <reading value="7.5" upper_value="12.100000381469727" lower_value="5.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.18/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.22/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.17/@outputs.2" target="//@componentPackages.0/@components.0/@sub_components.22/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14912" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit11"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14931" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="21.5" upper_value="34.099998474121094" lower_value="15.0"/>
+        </inputs>
+        <inputs gid="14932" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="22.200000762939453" upper_value="35.20000076293945" lower_value="15.5"/>
+        </inputs>
+        <inputs gid="14933" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="22.899999618530273" upper_value="36.29999923706055" lower_value="16.0"/>
+        </inputs>
+        <outputs gid="14964" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="44.599998474121094" upper_value="70.4000015258789" lower_value="31.5"/>
+        </outputs>
+        <reading value="8.199999809265137" upper_value="13.199999809265137" lower_value="5.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.25/@inputs.2" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.22/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.25/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.22/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.25/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:Component" gid="14913" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit12"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14934" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="23.600000381469727" upper_value="37.400001525878906" lower_value="16.5"/>
+        </inputs>
+        <outputs gid="14965" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="45.29999923706055" upper_value="71.5" lower_value="32.0"/>
+        </outputs>
+        <outputs gid="14966" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="46.0" upper_value="72.5999984741211" lower_value="32.5"/>
+        </outputs>
+        <reading value="8.899999618530273" upper_value="14.300000190734863" lower_value="6.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="14914" RunningNormally="true" ToBePredicted="false">
+        <name content="EE_Unit13"/>
+        <description>
+          <content>
+            <value content=""/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="14935" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="24.299999237060547" upper_value="38.5" lower_value="17.0"/>
+        </inputs>
+        <inputs gid="14936" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="25.0" upper_value="39.599998474121094" lower_value="17.5"/>
+        </inputs>
+        <inputs gid="14937" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="25.700000762939453" upper_value="40.70000076293945" lower_value="18.0"/>
+        </inputs>
+        <inputs gid="14938" RunningNormally="true" ToBePredicted="false">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="26.399999618530273" upper_value="41.79999923706055" lower_value="18.5"/>
+        </inputs>
+        <outputs gid="14967" RunningNormally="true" ToBePredicted="false">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="46.70000076293945" upper_value="73.69999694824219" lower_value="33.0"/>
+        </outputs>
+        <reading value="9.600000381469727" upper_value="15.399999618530273" lower_value="6.5"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.3" target="//@componentPackages.0/@components.0/@sub_components.29/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.4" target="//@componentPackages.0/@components.0/@sub_components.30/@inputs.0" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.25/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.30/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.29/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.1/@inputs.2" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.29/@outputs.1" target="//@componentPackages.0/@components.0/@sub_components.30/@inputs.2" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.22/@outputs.2" target="//@componentPackages.0/@components.0/@sub_components.30/@inputs.3" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:Component">
+        <name content="Component"/>
+        <description>
+          <content>
+            <value content="Component Description"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component">
+        <name content="Component"/>
+        <description>
+          <content>
+            <value content="Component Description"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.38/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.39/@inputs.0"/>
+      <reading value="0.5" upper_value="1.100000023841858"/>
+    </components>
+  </componentPackages>
+  <terminologyPackages>
+    <name content="New Terminology Package"/>
+    <description>
+      <content>
+        <value content="Component Description"/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+  </terminologyPackages>
+</digital_twin_:DigitalTwinPackage>

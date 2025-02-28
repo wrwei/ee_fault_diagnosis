@@ -1,0 +1,48 @@
+"<初始化开始>".println();
+var gid_zero = 14900;
+//main();
+cleanAll();
+"<初始化完成>".println();
+operation cleanAll(){
+//	var ComponentSet = getMainComponent();
+	Component.all.clean();
+	DirectedRelationship.all.clean();
+	Input.all.clean();
+	Output.all.clean();
+	Component.all.cleanValue();
+	Input.all.cleanValue();
+	Output.all.cleanValue();
+	Component.RandomNumber();
+	Input.RandomNumber();
+	Output.RandomNumber();
+}
+
+operation Any clean(){
+	for (e in self){
+		e.faulty = false;
+		e.RunningNormally = false;
+		e.RunningAbnormally = false;
+		e.ToBePredicted = true;
+	}
+}
+
+operation Any cleanValue(){
+	for (e in self){
+		if (e.reading.isDefined()){
+			e.reading.value = 0.0.asDouble();
+			e.reading.upper_value = 0.0.asDouble();
+			e.reading.lower_value = 0.0.asDouble();
+		}
+	}
+}
+
+operation Any RandomNumber(){
+	for (e in self){
+		if (e.reading.isDefined()){
+			e.gid = (gid_zero++).asString();
+			e.reading.value = 0.5.asDouble();
+			e.reading.upper_value = 1.0.asDouble();
+			e.reading.lower_value = 0.0.asDouble();
+		}
+	}
+}

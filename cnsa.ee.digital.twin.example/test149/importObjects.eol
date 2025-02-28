@@ -1,0 +1,672 @@
+"<导入系统模型>".println();
+mainImportObjects();
+//cleanAll();
+"<模型导入完毕>".println();
+operation mainImportObjects(){
+	var componentPackage = Model!ComponentPackage.all.first();
+//	for (c in componentPackage.components){
+//		delete c;
+//	}
+//	for (c in Model!Component.all){
+//		delete Model!Component.all;
+//	}
+//	return 0;
+	var component = componentPackage.createComponentElement("模型", "由Excel导入的模型");
+	componentPackage.components.add(component);
+	for (e in Excel!Sheet){
+		if (e.type == "Component"){
+			var c = component.createComponentElement(e.name,"");
+			component.sub_components.add(c);
+			c.gid = e.gid;
+			c.reading.upper_value = e.upper_value.asDouble();
+			c.reading.lower_value = e.lower_value.asDouble();
+			c.reading.value = e.value.asDouble();
+			var inputSet = e.source.createGidSet();
+//			(inputSet != null).println();
+			if (inputSet!= null){
+				for (gid in inputSet){
+					gid.println("gid:");
+					var input = c.createInput();
+					var input_excel = Excel!Sheet.all.select(s|s.gid == gid).first();
+					input_excel.println();
+					input.value = input_excel.value;
+					input.upper_value = input_excel.upper_value;
+					input.lower_value = input_excel.lower_value;
+				}
+			}
+			var outputSet = e.target.createGidSet();
+			if (outputSet != null){
+				for (gid in outputSet){
+					var output = c.createOutput();
+					var output_excel = Excel!Sheet.all.select(s|s.gid == gid).first();
+					output.value = output_excel.value;
+					output.upper_value = output_excel.upper_value;
+					output.lower_value = output_excel.lower_value;
+				}
+			}
+		}
+	}
+}
+
+operation String createGidSet(){
+	if ((self != "") and (self != ";")){
+		var gidSet = self.split(";");
+		return gidSet;
+	}
+}
+
+operation Model!Component createRelationships(blocks, componentSequence){
+	var UsedPortsGid = new Sequence;
+	for (block in blocks){
+		if (block.relationshipIsExisted()){
+			var component = self.getComponentByBlock(block);
+			var structs = block.getStructs();
+			if (structs.directed.notEmpty()){
+				self.createDirectedRelationships(component.outputs, structs.directed);
+			}
+			if (structs.undirected.notEmpty()){
+				for (i in structs.undirected.getLoopSequence()){
+					if (i.isLeftPorts(component)){
+						self.createUndirectedRelationships(component.getLeftPort(i), structs.undirected[i], UsedPortsGid);
+					}
+					else{
+						self.createUndirectedRelationships(component.getRightPort(i), structs.undirected[i], UsedPortsGid);
+					}
+				}
+			}
+		}
+	}
+}
+
+operation Model!Component createInterfaceRelationships(rootNode, blocks, componentSequence){\
+	if (rootNode.layer = 0){
+		return null;
+	}
+	var portNames = Sequence {"Inport", "Outport", "PMIOPort"};
+	var rootPortSequence = new Sequence;
+	var rootPortTypeSequence = new Sequence;
+	var subComponentSequence = new Sequence;
+	var subPortTypeSequence = new Sequence;
+	for (input in self.inputs){
+		rootPortSequence.add(input);
+		rootPortTypeSequence.add("Input");
+	}
+	for (output in self.outputs){
+		rootPortSequence.add(output);
+		rootPortTypeSequence.add("Output");
+	}
+	for (lport in self.lports){
+		rootPortSequence.add(lport);
+		rootPortTypeSequence.add("LPort");
+	}
+	for (rport in self.rports){
+		rootPortSequence.add(rport);
+		rootPortTypeSequence.add("RPort");
+	}
+	for (portName in portNames){
+		for (block in blocks){
+			if (block.Type = portName){
+				subPortTypeSequence.add(block.Type);
+				subComponentSequence.add(componentSequence.select(e|e.gid = block.handle.asString()).first());
+			}
+		}
+	}
+	if (rootPortSequence.notEmpty() and subComponentSequence.notEmpty() and rootPortTypeSequence.size() = subPortTypeSequence.size()){
+		for (i in Sequence{0..rootPortTypeSequence.size()-1}){
+			if (rootPortTypeSequence[i] = "Input"){
+				var subInput = subComponentSequence[i].createInput();
+				self.createSubDirectedRelationship(rootPortSequence[i], subInput);
+			}
+			else if (rootPortTypeSequence[i] = "Output"){
+				var subOutput = subComponentSequence[i].createOutput();
+				self.createSubDirectedRelationship(subOutput, rootPortSequence[i]);
+			}
+			else if (rootPortTypeSequence[i] = "LPort"){
+				var subLPort = subComponentSequence[i].createLPort();
+				self.createSubUndirectedRelationship(rootPortSequence[i], subLPort);
+			}
+			else if (rootPortTypeSequence[i] = "RPort"){
+				var subRPort = subComponentSequence[i].createRPort();
+				self.createSubUndirectedRelationship(rootPortSequence[i], subRPort);
+			}
+		}
+	}
+}
+
+operation getRootComponentBy(rootNode, allBlocks, componentSequence){
+	if (rootNode.layer = 0){
+		var DTPackages = createDigitalTwinPackage();
+		var cpRoot = DTPackages.initComponentPackage();
+		var terminologyPackage = DTPackages.initTerminologyPackage();
+		terminologyPackage.fillTerminologyPackage(allBlocks);
+		return cpRoot.createRootComponent(rootNode.name);
+	}
+	else{
+		return componentSequence.getRootComponentByName(rootNode.name);
+	}
+}
+
+operation Sequence getRootComponentByName(rootName){
+	return self.select(e|e.name.content.stringNormalization() = rootName.stringNormalization()).first();
+}
+
+operation String stringNormalization(){
+	return self.asString().split('\n').first().split(' ').first();
+}
+
+operation getBlocks(rootNode, allBlocks){
+	var blocks = new Sequence;
+	for (block in allBlocks){
+		var blockPath = block.Path.asString().split("/");
+		var rootPathName = blockPath[(blockPath.size()-2)];
+		if (rootPathName = rootNode.name){
+			blocks.add(block);
+		}
+	}
+	return blocks;
+}
+
+operation getLayerSequence(blocks){
+	var layerSequence = new Sequence;
+	layerSequence.add(Tuple{name = blocks.getFileName(), layer = 0});
+	for (block in blocks){
+		var blockPath = block.Path.asString().split("/");
+		var rootPathName = blockPath[(blockPath.size()-2)];
+		if (rootPathName.isNotLayersName(layerSequence)){
+			layerSequence.add(Tuple{name = rootPathName, layer = (blockPath.size()-2)});
+		}
+	}
+	return layerSequence;
+}
+
+operation String isNotLayersName(layerSequence){
+	if (layerSequence.select(e|e.name = self).notEmpty()){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+operation Any getFileName(){
+	return self[0].Path.asString().split("/").first();
+}
+
+operation Model!Component getLeftPort(i){
+	return self.lports[i];
+}
+
+operation Model!Component getRightPort(i){
+	return self.rports[i - self.lports.size()];
+}
+
+operation Any getLoopSequence(){
+	return Sequence{0..self.asSequence().size() - 1};
+}
+
+operation Real isLeftPorts(component : Model!Component){
+	return (self < component.lports.size());
+}
+
+operation Any getStructs(){
+	var structs = Tuple{"directed" = Sequence{}, "undirected" = Sequence{}};
+	var allStructs = self.getConnectivity().select(e|e.DstBlock <> null);
+	for (i in Sequence{0..allStructs.getObjectNumber() - 1}){
+		if (i < self.getBlockOutportNumber()){
+			structs.directed.add(allStructs[i]);
+		}
+		else{
+			structs.undirected.add(allStructs[i]);
+		}
+	}
+	return structs;
+}
+
+operation Any getBlockOutportNumber(){
+	return self.getPortHandles().Outport.getObjectNumber();
+}
+
+operation Model!Component getComponentByBlock(block : Any){
+	return self.getComponentByGid(block.getBlockGid());
+}
+
+operation Model!Component createPorts(blocks : Any){
+	for (block in blocks){
+		var component = self.getComponentByBlock(block);
+		var portHandles = block.getPortHandles();
+		if (portHandles.IsUnrecognized()){
+			"Unrecognized port exists.".errln();
+			return null;
+		}
+		component.createInports(portHandles.Inport);
+		component.createOutports(portHandles.Outport);
+		component.createLPorts(portHandles.LConn);
+		component.createRPorts(portHandles.RConn);
+	}
+}
+
+operation Any IsUnrecognized(){
+	if (self.Enable = null and self.Trigger = null and self.State = null and self.Ifaction = null and self.Reset = null and self.Event = null){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+operation Model!Component createDirectedRelationships(outputs : Any, directedStructs : Any){
+	for (i in Sequence{0..(directedStructs.size() - 1)}){
+		if (directedStructs[i].IsOnlyOneDstBlock()){
+			self.createSingleDirectedRelationship(outputs[i], directedStructs[i]);
+		}
+		else{
+			self.createMutiDirectedRelationship(outputs[i], directedStructs[i]);
+		}
+	}
+}
+
+operation Model!Component createUndirectedRelationships(port, undirectedStruct : Any, UsedPortsGid : Sequence){
+	if (port.gid.IsExistedIn(UsedPortsGid)){
+		return null;
+	}
+	if (undirectedStruct.IsOnlyOneDstBlock()){
+		self.createSingleUndirectedRelationship(port, undirectedStruct, UsedPortsGid);
+	}
+	else{
+		self.createMutiUndirectedRelationship(port, undirectedStruct, UsedPortsGid);
+	}
+}
+
+operation String IsExistedIn(UsedPortsGid : Sequence){
+	return UsedPortsGid.includes(self);
+}
+
+operation Model!Component createMutiUndirectedRelationship(port : Model!ComponentElement, struct : Any, UsedPortsGid : Sequence){
+	var switchNode =  self.createSwitch();
+	var ur = self.createSubUndirectedRelationship(port, switchNode);
+	UsedPortsGid.add(port.gid);
+	switchNode.ports.add(port);
+	for (j in struct.DstBlock.getLoopSequence()){
+		var targetComponent = self.getComponentByGid(struct.DstBlock[j].asString());
+		var portNumber = struct.DstPort[j].asString();
+		var targetLPort = targetComponent.lports.select(e|e.gid = portNumber).first();
+		var targetRPort = targetComponent.rports.select(e|e.gid = portNumber).first();
+		if (targetLPort <> null){
+			self.createSubUndirectedRelationship(switchNode, targetLPort);
+			UsedPortsGid.add(targetLPort.gid);
+			switchNode.ports.add(targetLPort);
+		}
+		else if (targetRPort <> null){
+			self.createSubUndirectedRelationship(switchNode, targetRPort);
+			UsedPortsGid.add(targetRPort.gid);
+			switchNode.ports.add(targetRPort);
+		}
+	}
+}
+
+operation Model!Component createSubUndirectedRelationship(port_1 : Model!ComponentElement, port_2 : Model!ComponentElement){
+	var undirectedRelationship = createUndirectedRelationship(port_1, port_2);
+	self.sub_components.add(undirectedRelationship);
+	return undirectedRelationship;
+}
+
+operation createUndirectedRelationship(port_1 : Model!ComponentElement, port_2 : Model!ComponentElement){
+	var undirectedRelationship = new Model!UndirectedRelationship;
+	undirectedRelationship.source = port_1;
+	undirectedRelationship.target = port_2;
+	return undirectedRelationship;
+}
+
+operation Model!Component createSingleUndirectedRelationship(port : Model!ComponentElement, struct : Any, UsedPortsGid : Sequence){
+	var targetComponent = self.getComponentByGid(struct.DstBlock.asString());
+	var portNumber = struct.DstPort.asString();
+	var targetLPort = targetComponent.lports.select(e|e.gid = portNumber).first();
+	var targetRPort = targetComponent.rports.select(e|e.gid = portNumber).first();
+	UsedPortsGid.add(port.gid);
+	if (targetLPort <> null){
+		self.createSubUndirectedRelationship(port, targetLPort);
+		UsedPortsGid.add(targetLPort.gid);
+	}
+	else if (targetRPort <> null){
+		self.createSubUndirectedRelationship(port, targetRPort);
+		UsedPortsGid.add(targetRPort.gid);
+	}
+}
+
+operation Any getObjectNumber(){
+	return self.asSequence().select(e|e <> null).size();
+}
+
+operation Any relationshipIsExisted(){
+	return (self.getConnectivity() <> null and self.getConnectivity().select(e|e.DstBlock <> null).notEmpty());
+}
+
+operation Any IsOnlyOneDstBlock(){
+	return (self.DstBlock.asSequence().size() = 1);
+}
+
+operation Model!Component getOutputsNumber(){
+	return self.outputs.size();
+}
+
+operation Model!Component createSingleDirectedRelationship(output, directedStruct){
+	var targetComponent = self.getComponentByGid(directedStruct.DstBlock.asString());
+	var portNumber = directedStruct.DstPort.asString();
+	var targetInput = targetComponent.inputs.select(e|e.name.content = portNumber).first();
+	if (targetInput <> null){
+		self.createSubDirectedRelationship(output, targetInput);
+	}
+}
+
+operation Model!Component createMutiDirectedRelationship(output, directedStruct){
+	var forkNode = self.createFork(output);
+	self.createSubDirectedRelationship(output, forkNode);
+	for (j in directedStruct.DstBlock.getLoopSequence()){
+		var targetComponent = self.getComponentByGid(directedStruct.DstBlock[j].asString());
+		var portNumber = directedStruct.DstPort[j].asString();
+		var targetInput = targetComponent.inputs.select(e|e.name.content = portNumber).first();
+		self.createSubDirectedRelationship(forkNode, targetInput);
+		forkNode.target.add(targetInput);
+	}
+}
+
+operation Model!Output getComponentRelationships(relationship){
+	return relationship.select(e|e.source.gid = self.gid and e.source.name.content = self.name.content).asSequence();
+}
+
+operation Model!Component createInports(inPorts : Any){
+	if (inPorts.isDefined()){
+		var id = 0.0;
+		for (inport in inPorts){
+			var input = self.createInput();
+			input.gid = inport.asString();
+			input.name.content = id.asString();
+			id = id + 1;
+		}
+	}
+}
+
+operation Model!Component createOutports(outPorts : Any){
+	if (outPorts.isDefined()){
+		var id = 0.0;
+		for (outport in outPorts){
+			var output = self.createOutput();
+			output.gid = outport.asString();
+			output.name.content = id.asString();
+			id = id + 1;
+		}
+	}
+}
+
+operation Model!Component createLPorts(Conns : Any){
+	if (Conns.isDefined()){
+		for (conn in Conns){
+			var port = self.createLPort();
+			port.gid = conn.asString();
+			port.name.content = "L";
+		}
+	}
+}
+
+operation Model!Component createRPorts(Conns : Any){
+	if (Conns.isDefined()){
+		for (conn in Conns){
+			var port = self.createRPort();
+			port.gid = conn.asString();
+			port.name.content = "R";
+		}
+	}
+}
+
+operation Model!Component createSubComponents(blocks, componentSequence){
+	for (block in blocks){
+		var component = self.createSubComponent();
+		component.fillComponentInfo(block);
+		componentSequence.add(component);
+	}
+}
+
+operation Model!TerminologyPackage fillTerminologyPackage(allBlocks){
+	var categoryList = self.createAllCategory(allBlocks);
+	for (block in allBlocks){
+		var category = categoryList.select(e|e.name.content = block.BlockType.asString()).first();
+		self.createTerm(block, category);
+	}
+}
+
+operation Model!TerminologyPackage createAllCategory(blocks){
+	var categoryNameList = new Sequence;
+	var categoryList = new Sequence;
+	for (block in blocks){
+		if (not categoryNameList.includes(block.BlockType.asString())){
+			categoryNameList.add(block.BlockType.asString());
+			var category = self.createCategory(block.BlockType.asString());
+			categoryList.add(category);
+		}
+	}
+	return categoryList;
+}
+
+operation Model!TerminologyPackage createTerm(block, category){
+	var term = new Model!Term;
+	term.createArtifactElement(block.Name, "Gid = " + block.handle.asString());
+	term.category.add(category);
+	self.terminologyElement.add(term);
+}
+
+operation Model!TerminologyPackage createCategory(name){
+	var category = new Model!Category;
+	category.createArtifactElement(name, "");
+	self.terminologyElement.add(category);
+	return category;
+}
+
+operation Any getBlockGid(){
+	return self.handle.asString();
+}
+
+operation Model!Component getComponentByGid(gid : String){
+	return self.sub_components.select(e|e.gid = gid).first();
+}
+
+operation Model!Component getComponentsByGid(gid : String){
+	return self.sub_components.select(e|e.gid = gid);
+}
+
+operation Any getConnectivity() {
+	return self.PortConnectivity;
+}
+
+operation Any getPortHandles() {
+	return self.PortHandles;
+}
+
+operation Model!Component fillComponentInfo(block : Any){
+	self.gid = block.Handle.asString();
+	self.name.content = block.Name.asString();
+	self.component_name = block.BlockType.asString();
+}
+
+operation getAllBlocks(){
+	return S!Block.all;
+}
+
+operation Any createName(name : String){
+	var n = new Model!LangString;
+	n.content = name;
+	self.name = n;
+}
+
+operation Any createDescription(description : String){
+	var d = new Model!Description;
+	var c = new Model!MultiLangString;
+	var v = new Model!LangString;
+	v.content = description;
+	c.value.add(v);
+	d.content = c;
+	self.description = d;
+}
+
+operation Any createImplementationConstraint(description: String){
+	var d = new Model!ImplementationConstraint;
+	var c = new Model!MultiLangString;
+	var v = new Model!LangString;
+	v.content = description;
+	c.value.add(v);
+	d.content = c;
+	self.implementationConstraint.add(d);
+}
+
+operation Any createExternalReference(){
+	var e = new Model!ExternalReference;
+	var locationContent = new Model!LangString;
+	var typeContent = new Model!LangString;
+	var metadataContent = new Model!LangString;
+	locationContent.content = "location";
+	typeContent.content = "type";
+	metadataContent.content = "metadata";
+	e.location = locationContent;
+	e.type = typeContent;
+	e.metadata = metadataContent;
+	e.createImplementationConstraint("Query");
+	self.externalReference = e;
+}
+
+operation Model!DigitalTwinPackage initComponentPackage(){
+	var componentPackage = createComponentPackage();
+	self.componentPackages.add(componentPackage);
+	return componentPackage;
+}
+
+operation Model!DigitalTwinPackage initTerminologyPackage(){
+	var terminologyPackage = createTerminologyPackage();
+	self.terminologyPackages.add(terminologyPackage);
+	return terminologyPackage;
+}
+
+operation createDigitalTwinPackage(){
+	var DTPackage = new Model!DigitalTwinPackage;
+	return DTPackage;
+}
+
+operation Any createArtifactElement(name : String, description : String){
+	self.createName(name);
+	self.createDescription(description);
+	self.createExternalReference();
+	return self;
+}
+
+operation createComponentPackage(){
+	var cp = new Model!ComponentPackage;
+	cp.createComponentElement("New ComponentPackage", "ComponentPackage Description");
+	return cp;
+}
+
+operation createTerminologyPackage(){
+	var terminologyPackage = new Model!TerminologyPackage;
+	terminologyPackage.createTerminologyElement("New TerminologyPackage", "TerminologyPackage Description");
+	return terminologyPackage;
+}
+
+operation Any createTerminologyElement(name : String, description : String){
+	return self.createArtifactElement(name, description);
+}
+
+operation Any createComponentElement(name : String, description : String){
+	var component = new Model!Component;
+	component.createArtifactElement(name, description);
+	var reading = new Model!Reading;
+	component.reading = reading;
+	return component;
+}
+
+operation createComponent(){
+	var component = new Model!Component;
+	component.createComponentElement("Component", "");
+	component.externalReference.createImplementationConstraint("Query Result");
+	component.externalReference.createImplementationConstraint("Simulation Variable");
+	component.externalReference.createImplementationConstraint("Simulation Result");
+	return component;
+}
+
+operation Model!ComponentPackage createRootComponent(rootName){
+	var component = createComponent();
+	component.name.content = rootName;
+	component.component_name = "RootSystem";
+	self.components.add(component);
+	return component;
+}
+
+operation Model!Component createSubComponent(){
+	var component = createComponent();
+	self.sub_components.add(component);
+	return component;
+}
+
+operation Any createReading(){
+	var reading = new Model!Reading;
+	self.reading = reading;
+}
+
+operation Model!Component createLPort(){
+	var lport = new Model!LPort;
+	lport = lport.createComponentElement("lport", "");
+	lport.createReading();
+	self.lports.add(lport);
+	return lport;
+}
+
+operation Model!Component createRPort(){
+	var rport = new Model!RPort;
+	rport = rport.createComponentElement("O", "");
+	rport.createReading();
+	self.rports.add(rport);
+	return rport;
+}
+
+operation Model!Component createOutput(){
+	var output = new Model!Output;
+	output = output.createComponentElement("O", "");
+//	output.createReading();
+//	self.outputs.add(output);
+	return output;
+}
+
+operation Model!Component createInput(){
+	var input = new Model!Input;
+	input = input.createComponentElement("I", "");
+//	input.createReading();
+//	self.inputs.add(input);
+	return input;
+}
+
+operation createDirectedRelationship(source : Any, target : Any){
+	var directedRelationship = new Model!DirectedRelationship;
+	directedRelationship.source = source;
+	directedRelationship.target = target;
+	return directedRelationship;
+}
+
+operation Model!Component createSubDirectedRelationship(source : Any, target : Any){
+	var directedRelationship = createDirectedRelationship(source, target);
+	self.sub_components.add(directedRelationship);
+	return directedRelationship;
+}
+
+operation Model!Component createFork(source : Model!Output){
+	var fork = new Model!Fork;
+	fork = fork.createComponentElement(source.name.content, "");
+	fork.createReading();
+	fork.gid = source.gid;
+	fork.source = source;
+	self.sub_components.add(fork);
+	return fork;
+}
+
+operation Model!Component createSwitch(){
+	var switchNode = new Model!Switch;
+	switchNode = switchNode.createComponentElement("S", "");
+	switchNode.createReading();
+	self.sub_components.add(switchNode);
+	return switchNode;
+}

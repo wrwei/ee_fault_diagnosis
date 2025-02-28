@@ -1,0 +1,192 @@
+"<开始全局推理>".println();
+main();
+"<全局推理结束>".println();
+
+operation main(){
+	var ComponentFaultySet = Component.all.select(e|e.faulty == true);
+	var DRelationshipFaultySet = DirectedRelationship.all.select(e|e.faulty == true);
+	var InputFaultySet = Input.all.select(e|e.faulty == true);
+	var OutputFaultySet = Output.all.select(e|e.faulty == true);
+	
+	ComponentFaultySet.analyseChildren();
+	DRelationshipFaultySet.analyseChildren();
+	InputFaultySet.analyseChildren();
+	OutputFaultySet.analyseChildren();
+	
+	var ComponentAbnormalSet = Component.all.select(e|e.RunningAbnormally == true);
+	var DRelationshipAbnormalSet = DirectedRelationship.all.select(e|e.RunningAbnormally == true);
+	var InputAbnormalSet = Input.all.select(e|e.RunningAbnormally == true);
+	var OutputAbnormalSet = Output.all.select(e|e.RunningAbnormally == true);
+	
+	ComponentAbnormalSet.analyseChildren();
+	DRelationshipAbnormalSet.analyseChildren();
+	InputAbnormalSet.analyseChildren();
+	OutputAbnormalSet.analyseChildren();
+	
+	var ComponentNormalSet = Component.all.select(e|e.RunningNormally == true);
+	var DRelationshipNormalSet = DirectedRelationship.all.select(e|e.RunningNormally == true);
+	var InputNormalSet = Input.all.select(e|e.RunningNormally == true);
+	var OutputNormalSet = Output.all.select(e|e.RunningNormally == true);
+	
+	ComponentNormalSet.analyseParent();
+	DRelationshipNormalSet.analyseParent();
+	InputNormalSet.analyseParent();
+	OutputNormalSet.analyseParent();
+}
+operation Any analyseParent(){
+	for (e in self){
+		e.inferParent();
+	}
+}
+
+operation Any analyseChildren(){
+	for (e in self){
+		e.inferChild();
+	}
+}
+
+operation Any clean(){
+	for (e in self){
+		if (e.isDefined()){
+			e.faulty = false;
+			e.RunningNormally = false;
+			e.RunningAbnormally = false;
+			e.ToBePredicted = true;
+		}
+	}
+}
+operation Any inferParent(){
+	var parents = self.getParentsNode();
+//	parents.println("parents:");s
+	if (parents.isDefined()){
+		for (p in parents){
+//			p.println("p:");
+//			p.type.println("p.type:");
+//			p.faulty.println("p.faulty:");
+//			"".println();
+			if (not p.isDefined()){
+			
+			}
+			else if (p.type.name == "Fork"){
+				"p is Fork.".println();
+			}
+			else if (p.faulty == true){
+				self.RunningNormally = false;
+				self.RunningAbnormally = true;
+				("gid:"+self.gid.asString()+" 正常状态 -> 异常状态").println();
+			}
+			else if (p.RunningNormally == true){
+			}
+			else if (p.RunningAbnormally = true){
+				self.RunningNormally = false;
+				self.RunningAbnormally = true;
+				("gid:"+self.gid.asString()+" 正常状态 -> 异常状态").println();
+			}
+			else if (p.ToBePredicted = true){
+				p.ToBePredicted = false;
+				p.RunningNormally = true;	
+				("gid:"+p.gid.asString()+" 待检测 -> 正常状态").println();			
+				p.inferParent();
+				"-------迭代-------".println();
+			}
+		}
+	}
+}
+
+operation Any inferChild(){
+	var children = self.getChildrenNode();
+	if (children.isDefined()){
+		for (c in children){
+			if (c.faulty == true){
+			}
+			else if (c.RunningNormally == true){
+				c.faulty = false;
+				c.RunningNormally = false;
+				c.RunningAbnormally = true;
+				c.ToBePredicted = false;
+				("gid:"+c.gid.asString()+" 正常状态 -> 异常状态").println();
+				c.inferChild();
+				"-------迭代-------".println();
+			}
+			else if (c.RunningAbnormally = true){
+				c.inferChild();
+				"-------迭代-------".println();
+			}
+			else if (c.ToBePredicted = true){
+				c.faulty = false;
+				c.RunningNormally = false;
+				c.RunningAbnormally = true;
+				c.ToBePredicted = false;
+				("gid:"+c.gid.asString()+" 待检测 -> 异常状态").println();
+				c.inferChild();
+				"-------迭代-------".println();
+			}
+		}
+	}
+}
+
+operation Component getComponentName(){
+	return self.name.content;
+}
+
+operation Any getParentsNode(){
+	if (self.IsType("Component")){
+//		"component.".println();
+		if (self.inputs.notEmpty()){
+			return self.inputs;
+		}
+	}
+	else if (self.IsType("DirectedRelationship")){
+//		"DirectedRelationship.".println();
+		return OrderedSet{self.source};
+	}
+	else if (self.IsType("Input")){
+//		"Input.".println();
+		var input = DirectedRelationship.all.select(e|e.target == self).first();
+		if (input.isDefined()){
+//			"input.isDefined()".println();
+//			input.println();
+			return OrderedSet{input};
+		}
+		else{
+//			"input.NotDefined".println();
+			return null;
+		}
+	}
+	else if (self.IsType("Output")){
+//		"Output.".println();
+		return OrderedSet{self.eContainer()};
+	}
+}
+
+operation Any getChildrenNode(){
+	if (self.IsType("Component")){
+//		"component.".println();
+		if (self.outputs.notEmpty()){
+			return self.outputs;
+		}
+	}
+	else if (self.IsType("DirectedRelationship")){
+//		"DirectedRelationship.".println();
+		return OrderedSet{self.target};
+	}
+	else if (self.IsType("Output")){
+//		"Input.".println();
+		var output = DirectedRelationship.all.select(e|e.source == self).first();
+		if (output.isDefined()){
+			return OrderedSet{output};
+		}
+		else{
+			return null;
+		}
+	}
+	else if (self.IsType("Input")){
+//		"Output.".println();
+		return OrderedSet{self.eContainer()};
+	}
+}
+
+operation Any IsType(str){
+	return self.type.name == str;
+}
+

@@ -1,0 +1,48 @@
+"<开始数据判读>".println();
+main();
+"<数据判读结束>".println();
+operation cleanAll(){
+//	var ComponentSet = getMainComponent();
+	Component.all.clean();
+	DirectedRelationship.all.clean();
+	Input.all.clean();
+	Output.all.clean();
+}
+
+operation main(){
+	Component.all.judge();
+	Input.all.judge();
+	Output.all.judge();
+}
+
+operation Any judge(){
+	for (e in self){
+		if (e.reading.isDefined()){
+			if (e.reading.upper_value < e.reading.lower_value){
+				e.faulty = false;
+				e.RunningNormally = false;
+				e.RunningAbnormally = true;
+				e.ToBePredicted = false;
+			}
+			else if (e.reading.value < e.reading.lower_value){
+				e.faulty = true;
+				e.RunningNormally = false;
+				e.RunningAbnormally = false;
+				e.ToBePredicted = false;
+			}
+			else if (e.reading.value > e.reading.upper_value){
+				e.faulty = true;
+				e.RunningNormally = false;
+				e.RunningAbnormally = false;
+				e.ToBePredicted = false;
+			}
+			else {
+				e.faulty = false;
+				e.RunningNormally = true;
+				e.RunningAbnormally = false;
+				e.ToBePredicted = false;
+			}
+			e.gid.println(">> 数据判读 gid:");
+		}
+	}
+}

@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component_="http://cnsa.ee.digital.twin/component" xmlns:digital_twin_="http://cnsa.ee.digital.twin/digital_twin">
+  <digital_twin_:DigitalTwinPackage>
+    <componentPackages>
+      <name content="模型"/>
+      <description>
+        <content>
+          <value content="由Excel导入的模型"/>
+        </content>
+      </description>
+      <externalReference>
+        <location content="location"/>
+        <type content="type"/>
+        <metadata content="metadata"/>
+        <implementationConstraint>
+          <content>
+            <value content="Query"/>
+          </content>
+        </implementationConstraint>
+      </externalReference>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <reading/>
+      </components>
+      <components xsi:type="component_:Component">
+        <name content="模型"/>
+        <description>
+          <content>
+            <value content="由Excel导入的模型"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <sub_components xsi:type="component_:Component" gid="14901">
+          <name content="火箭测试发射系统"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="0.5" upper_value="1.100000023841858"/>
+        </sub_components>
+        <sub_components xsi:type="component_:Component" gid="14902">
+          <name content="单机2"/>
+          <description>
+            <content>
+              <value content=""/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="1.2000000476837158" upper_value="2.200000047683716" lower_value="0.5"/>
+        </sub_components>
+        <reading/>
+      </components>
+    </componentPackages>
+    <terminologyPackages>
+      <name content="New Terminology Package"/>
+      <description>
+        <content>
+          <value content="Component Description"/>
+        </content>
+      </description>
+      <externalReference>
+        <location content="location"/>
+        <type content="type"/>
+        <metadata content="metadata"/>
+        <implementationConstraint>
+          <content>
+            <value content="Query"/>
+          </content>
+        </implementationConstraint>
+      </externalReference>
+    </terminologyPackages>
+  </digital_twin_:DigitalTwinPackage>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <sub_components xsi:type="component_:Component">
+      <name content="I"/>
+      <description>
+        <content>
+          <value content=""/>
+        </content>
+      </description>
+      <externalReference>
+        <location content="location"/>
+        <type content="type"/>
+        <metadata content="metadata"/>
+        <implementationConstraint>
+          <content>
+            <value content="Query"/>
+          </content>
+        </implementationConstraint>
+      </externalReference>
+      <reading/>
+    </sub_components>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Output/>
+  <component_:Component>
+    <name content="O"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+  <component_:Input/>
+  <component_:Component>
+    <name content="I"/>
+    <description>
+      <content>
+        <value content=""/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <reading/>
+  </component_:Component>
+</xmi:XMI>

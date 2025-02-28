@@ -1,0 +1,23 @@
+"<开始规则导入>".println();
+mainimportRegulationValues();
+"<规则导入完毕>".println();
+
+operation mainimportRegulationValues(){
+	Model!Component.all.importRegulationValues();
+//	"Component Over".println();
+	Model!Input.all.importRegulationValues();
+//	"Input Over".println();
+	Model!Output.all.importRegulationValues();
+}
+
+operation Any importRegulationValues(){
+	for (c in self){
+		for (e in Excel!Sheet){
+			if (e.gid.asReal() == c.gid.asReal()){
+				c.gid.println(">> 更新规则数据 gid:");
+				c.reading.upper_value = e.upper_value.asReal().asDouble();
+				c.reading.lower_value = e.lower_value.asReal().asDouble();
+			}
+		}
+	}
+}

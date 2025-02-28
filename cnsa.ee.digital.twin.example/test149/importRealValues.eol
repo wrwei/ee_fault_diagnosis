@@ -1,0 +1,19 @@
+"<真实值开始更新>".println();
+mainimportRealValues();
+"<真实值更新完毕>".println();
+operation mainimportRealValues(){
+	Model!Component.all.importRealValues();
+	Model!Input.all.importRealValues();
+	Model!Output.all.importRealValues();
+}
+
+operation Any importRealValues(){
+	for (c in self){
+		for (e in Excel!Sheet){
+			if (e.gid.asReal() == c.gid.asReal()){
+				c.gid.println(">> 更新真实数据 gid:");
+				c.reading.value = e.value.asReal().asDouble();
+			}
+		}
+	}
+}
