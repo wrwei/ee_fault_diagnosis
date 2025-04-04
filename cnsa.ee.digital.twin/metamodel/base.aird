@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_VneSAJEsEe-HDNcGhfa6ow" selectedViews="_VoJAYJEsEe-HDNcGhfa6ow _VoPHAJEsEe-HDNcGhfa6ow _VoPuEJEsEe-HDNcGhfa6ow _VoQ8MJEsEe-HDNcGhfa6ow" version="15.1.0.202211301600">
+  <viewpoint:DAnalysis uid="_VneSAJEsEe-HDNcGhfa6ow" selectedViews="_VoJAYJEsEe-HDNcGhfa6ow _VoPHAJEsEe-HDNcGhfa6ow _VoPuEJEsEe-HDNcGhfa6ow _VoQ8MJEsEe-HDNcGhfa6ow" version="15.4.1.202403191723">
     <semanticResources>base.ecore</semanticResources>
     <semanticResources>base.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_VoJAYJEsEe-HDNcGhfa6ow">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_VyLtMJEsEe-HDNcGhfa6ow" name="base class diagram" repPath="#_VyIp4JEsEe-HDNcGhfa6ow" changeId="1729680557381">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_VyLtMJEsEe-HDNcGhfa6ow" name="base class diagram" repPath="#_VyIp4JEsEe-HDNcGhfa6ow" changeId="1743715473722">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="base.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1047,6 +1047,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WGeiOpEsEe-HDNcGhfa6ow" description="_WGeiN5EsEe-HDNcGhfa6ow" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WGeiPJEsEe-HDNcGhfa6ow" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_WGeiO5EsEe-HDNcGhfa6ow" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -1125,6 +1126,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WGfwUJEsEe-HDNcGhfa6ow" description="_WGeiN5EsEe-HDNcGhfa6ow" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WGfwUpEsEe-HDNcGhfa6ow" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_WGfwUZEsEe-HDNcGhfa6ow" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -1138,6 +1140,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WGfwV5EsEe-HDNcGhfa6ow" description="_WGeiN5EsEe-HDNcGhfa6ow" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WGfwWZEsEe-HDNcGhfa6ow" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_WGfwWJEsEe-HDNcGhfa6ow" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -1203,6 +1206,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WGgXcpEsEe-HDNcGhfa6ow" description="_WGeiN5EsEe-HDNcGhfa6ow" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WGgXdJEsEe-HDNcGhfa6ow" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_WGgXc5EsEe-HDNcGhfa6ow" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>

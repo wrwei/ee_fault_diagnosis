@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="ASCII"?>
+<digital_twin_:DigitalTwinPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:component_="http://cnsa.ee.digital.twin/component" xmlns:digital_twin_="http://cnsa.ee.digital.twin/digital_twin">
+  <componentPackages>
+    <name content="toaster component package"/>
+    <description>
+      <content>
+        <value content="contains component diagram of a toaster"/>
+      </content>
+    </description>
+    <externalReference>
+      <location content="location"/>
+      <type content="type"/>
+      <metadata content="metadata"/>
+      <implementationConstraint>
+        <content>
+          <value content="Query"/>
+        </content>
+      </implementationConstraint>
+    </externalReference>
+    <components xsi:type="component_:Component" gid="Toaster">
+      <name content="Toaster"/>
+      <description>
+        <content>
+          <value content="Component Diagram for a toaster"/>
+        </content>
+      </description>
+      <externalReference>
+        <location content="location"/>
+        <type content="type"/>
+        <metadata content="metadata"/>
+        <implementationConstraint>
+          <content>
+            <value content="Query"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Query Result"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Simulation Variable"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value content="Simulation Result"/>
+          </content>
+        </implementationConstraint>
+      </externalReference>
+      <inputs upper="252.0" lower="216.0" RunningNormally="true" ToBePredicted="false">
+        <name content="AC"/>
+        <description>
+          <content>
+            <value content="Mains Power Supply"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <reading value="230.0" unit="V"/>
+      </inputs>
+      <sub_components xsi:type="component_:Component" identity="4">
+        <name content="Heating Element 3"/>
+        <description>
+          <content>
+            <value content="Resistor which heats up while the toaster is powered"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" identity="5">
+        <name content="Electro-magnet"/>
+        <description>
+          <content>
+            <value content="Holds the lever down while the toaster is powered"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" gid="bipolarSwitch" identity="1">
+        <name content="Bipolar Switch"/>
+        <description>
+          <content>
+            <value content="Turns on the toaster when lever is pushed down"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs gid="bSwitchIn">
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs gid="bSwitchOut">
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" safety_related="true">
+        <name content="AC Adaptor"/>
+        <description>
+          <content>
+            <value content="Cable and plug which connects the toaster to a power supply"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="NT"/>
+          <description>
+            <content>
+              <value content="Completes Circuit"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <inputs gid="powerSocket" upper="240.0" lower="220.0">
+          <name content="AC"/>
+          <description>
+            <content>
+              <value content="Mains power supply"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading value="230.0" upper_value="252.0" lower_value="216.0" unit="V"/>
+        </inputs>
+        <outputs>
+          <name content="DC"/>
+          <description>
+            <content>
+              <value content="DC Output to the toaster"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+        <sub_components xsi:type="component_:Component" componentType="hardware">
+          <name content="Fuse"/>
+          <description>
+            <content>
+              <value content="Connects to power mains. Melts if current gets too high."/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <inputs>
+            <name content="I"/>
+            <description>
+              <content>
+                <value content="Input Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </inputs>
+          <outputs>
+            <name content="O"/>
+            <description>
+              <content>
+                <value content="Output Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </outputs>
+        </sub_components>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" target="//@componentPackages.0/@components.0/@sub_components.3/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1" target="//@componentPackages.0/@components.0/@sub_components.3/@sub_components.0/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" label="Live Wire" source="//@componentPackages.0/@components.0/@sub_components.3/@sub_components.0/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.3/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" target="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1"/>
+        <sub_components xsi:type="component_:DirectedRelationship" target="//@componentPackages.0/@components.0/@sub_components.2/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.3/@inputs.0" target="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1"/>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" identity="6">
+        <name content="Stop Button"/>
+        <description>
+          <content>
+            <value content="Shuts off power to the toaster"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" identity="3">
+        <name content="Heating Element 1"/>
+        <description>
+          <content>
+            <value content="Resistor which heats up while the toaster is powered"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:Component" identity="2">
+        <name content="Timer"/>
+        <description isCitation="true">
+          <content>
+            <value content="Controls how long the toaster is powered"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+        <sub_components xsi:type="component_:Component">
+          <name content="Potentiometer"/>
+          <description>
+            <content>
+              <value content="Dial which controls how long the toaster is turned on."/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <inputs>
+            <name content="I"/>
+            <description>
+              <content>
+                <value content="Input Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </inputs>
+          <outputs>
+            <name content="O"/>
+            <description>
+              <content>
+                <value content="Output Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </outputs>
+        </sub_components>
+        <sub_components xsi:type="component_:Component">
+          <name content="Programmable Timer"/>
+          <description>
+            <content>
+              <value content="Takes input from potentiometer. Controls how long the toaster is on."/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+            <implementationConstraint>
+              <content>
+                <value content="Query Result"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <inputs>
+            <name content="I"/>
+            <description>
+              <content>
+                <value content="Input Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </inputs>
+          <outputs>
+            <name content="O"/>
+            <description>
+              <content>
+                <value content="Output Description"/>
+              </content>
+            </description>
+            <externalReference>
+              <location content="location"/>
+              <type content="type"/>
+              <metadata content="metadata"/>
+              <implementationConstraint>
+                <content>
+                  <value content="Query"/>
+                </content>
+              </implementationConstraint>
+            </externalReference>
+            <reading/>
+          </outputs>
+        </sub_components>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.6/@inputs.0" target="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.0/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.0/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" target="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.1/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.1/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" target="//@componentPackages.0/@components.0/@sub_components.6/@outputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship"/>
+        <sub_components xsi:type="component_:DirectedRelationship"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.0/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.1/@inputs.0"/>
+        <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.6/@sub_components.1/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.6/@outputs.0"/>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire1" label="wire1" source="//@componentPackages.0/@components.0/@sub_components.3/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.2/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire8" source="//@componentPackages.0/@components.0/@sub_components.6/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.1/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire2" label="wire2" source="//@componentPackages.0/@components.0/@sub_components.2/@outputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire7" target="//@componentPackages.0/@components.0/@sub_components.6/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire3" target="//@componentPackages.0/@components.0/@sub_components.5/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire11" source="//@componentPackages.0/@components.0/@sub_components.4/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.3/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire6" source="//@componentPackages.0/@components.0/@sub_components.0/@outputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire9" source="//@componentPackages.0/@components.0/@sub_components.1/@outputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire10" target="//@componentPackages.0/@components.0/@sub_components.4/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="powerSocket" label="powerSocket" source="//@componentPackages.0/@components.0/@inputs.0" target="//@componentPackages.0/@components.0/@sub_components.3/@inputs.1" RunningNormally="true" ToBePredicted="false"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:Component" identity="3">
+        <name content="Heating Element 2"/>
+        <description>
+          <content>
+            <value content="Resistor which heats up while the toaster is powered"/>
+          </content>
+        </description>
+        <externalReference>
+          <location content="location"/>
+          <type content="type"/>
+          <metadata content="metadata"/>
+          <implementationConstraint>
+            <content>
+              <value content="Query"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Query Result"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Variable"/>
+            </content>
+          </implementationConstraint>
+          <implementationConstraint>
+            <content>
+              <value content="Simulation Result"/>
+            </content>
+          </implementationConstraint>
+        </externalReference>
+        <inputs>
+          <name content="I"/>
+          <description>
+            <content>
+              <value content="Input Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </inputs>
+        <outputs>
+          <name content="O"/>
+          <description>
+            <content>
+              <value content="Output Description"/>
+            </content>
+          </description>
+          <externalReference>
+            <location content="location"/>
+            <type content="type"/>
+            <metadata content="metadata"/>
+            <implementationConstraint>
+              <content>
+                <value content="Query"/>
+              </content>
+            </implementationConstraint>
+          </externalReference>
+          <reading/>
+        </outputs>
+      </sub_components>
+      <sub_components xsi:type="component_:DirectedRelationship"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire4" source="//@componentPackages.0/@components.0/@sub_components.5/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.26/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" gid="wire5" source="//@componentPackages.0/@components.0/@sub_components.26/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.0/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.2/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.5/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.2/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.6/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.0/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.4/@inputs.0"/>
+      <sub_components xsi:type="component_:DirectedRelationship" source="//@componentPackages.0/@components.0/@sub_components.1/@outputs.0" target="//@componentPackages.0/@components.0/@sub_components.4/@inputs.0"/>
+    </components>
+  </componentPackages>
+</digital_twin_:DigitalTwinPackage>
